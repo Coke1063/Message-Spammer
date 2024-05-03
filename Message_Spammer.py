@@ -29,9 +29,12 @@ def def_factors():
         exit()
 
 
-
 def rantmode():
     rant = pt.prompt('Enter your rant:')
+    if rant is not None:
+        pass
+    else:
+        exit()
     global splitrant
     splitrant = rant.split()
     confirmpromptrmode()
@@ -88,8 +91,6 @@ def rmode_init():
             key.write(words)
             key.press('enter')
             continue
-
-
 
 
 def_factors()
