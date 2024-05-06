@@ -41,7 +41,9 @@ def rantmode():
 
 
 def confirmprompt():
-    prompt = pt.confirm('Please make sure that when you press enter the message is sent before continuing.')
+    prompt = pt.confirm('Please make sure that when you press enter the message is sent before continuing. YOU CAN '
+                        'STOP AT ANY TIME BY MOVING'
+                        'YOUR MOUSE TO ANY CORNER OF YOUR SCREEN.')
     if prompt == 'OK':
         spam_init()
     else:
