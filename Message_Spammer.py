@@ -80,19 +80,24 @@ def rmode_init():
     time.sleep(2)
     global a
     a = 0
-    for words in splitrant:
-        if a == 0:
-            a = 1
-            pt.moveTo(806, 554, 0.5)
-            key.write(words)
-            key.press('enter')
-            continue
-        else:
-            a = 0
-            pt.moveTo(1139, 437, 0.5)
-            key.write(words)
-            key.press('enter')
-            continue
+    try:
+        for words in splitrant:
+            if a == 0:
+                a = 1
+                pt.moveTo(806, 554, 0.3)
+                key.write(words)
+                key.press('enter')
+                continue
+            else:
+                a = 0
+                pt.moveTo(1139, 437, 0.3)
+                key.write(words)
+                key.press('enter')
+                continue
+    except:
+        pt.alert("An error has ocurred. (Mostly as an attempt to debug on Azaoki's pc")
+        exit()
+    pt.moveTo(900, 600, 0.3)
 
 
 def_factors()
