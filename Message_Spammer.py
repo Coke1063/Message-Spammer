@@ -18,15 +18,17 @@ def def_factors():
     else:
         exit()
     global paste_clip
-    paste_clip = pt.confirm('Do you want to paste the most recently copied item?(Ctrl + V) It is recommended to use '
-                            'this option for faster and more reliable spamming.')
+    paste_clip = pt.confirm('Do you want to paste the most recently copied item?(Ctrl + v) It is recommended to '
+                            'use this option for quicker and more reliable spamming.')
     if paste_clip == 'OK':
+        azaoki()
         return confirmprompt()
     else:
         pass
     global message
     message = pt.prompt('Enter the message:')
     if message is not None:
+        azaoki()
         confirmprompt()
     else:
         exit()
@@ -42,7 +44,13 @@ def rantmode():
         exit()
     global splitrant
     splitrant = rant.split()
+    azaoki()
     confirmpromptrmode()
+
+
+def azaoki():
+    if pt.confirm("Are you Asaoki? (Name spelled correctly)") == "OK":
+        pt.alert("Hijo de Sputnik, Mig-17, cabello, KSP, space whales, viva USSR, equalizer.")
 
 
 def confirmprompt():
