@@ -18,7 +18,8 @@ def def_factors():
     else:
         exit()
     global paste_clip
-    paste_clip = pt.confirm('Do you want to paste the most recently copied item?(ctrl + v)')
+    paste_clip = pt.confirm('Do you want to paste the most recently copied item?(Ctrl + V) It is recommended to use '
+                            'this option for faster and more reliable spamming.')
     if paste_clip == 'OK':
         return confirmprompt()
     else:
@@ -78,20 +79,36 @@ def spam_init():
         b = 0
         time.sleep(2)
         while i < int(amount):
-            if b == 0:
-                pt.moveTo(806, 554, 0.3)
-                pt.typewrite(message)
-                pt.press('enter')
-                i += 1
-                b = 1
-                continue
+            if len(message) <= 10:
+                if b == 0:
+                    pt.moveTo(806, 554, 0.3)
+                    pt.typewrite(message)
+                    pt.press('enter')
+                    i += 1
+                    b = 1
+                    continue
+                else:
+                    pt.moveTo(1139, 437, 0.3)
+                    pt.typewrite(message)
+                    pt.press('enter')
+                    i += 1
+                    b = 0
+                    continue
             else:
-                pt.moveTo(1139, 437, 0.3)
-                pt.typewrite(message)
-                pt.press('enter')
-                i += 1
-                b = 0
-                continue
+                if b == 0:
+                    pt.moveTo(806, 554, 0.5)
+                    pt.typewrite(message)
+                    pt.press('enter')
+                    i += 1
+                    b = 1
+                    continue
+                else:
+                    pt.moveTo(1139, 437, 0.5)
+                    pt.typewrite(message)
+                    pt.press('enter')
+                    i += 1
+                    b = 0
+                    continue
         pt.moveTo(900, 600, 0.3)
     else:
         time.sleep(2)
