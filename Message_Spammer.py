@@ -137,8 +137,7 @@ def rmode_init():
                 key.press('enter')
                 continue
     except:
-        pt.alert("An error has ocurred. this also shows up when you move your mouse to the corner.(Mostly as an "
-                 "attempt to debug on Azaoki's pc)")
+        pt.alert("An error has ocurred. this also shows up when you move your mouse to the corner.")
         exit()
     pt.moveTo(900, 600, 0.3)
 
